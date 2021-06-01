@@ -1,6 +1,6 @@
 {
   "name": "ckeditor5-build-balloon-block-strapi",
-  "version": "27.1.0",
+  "version": "27.2.0",
   "description": "The balloon editor build of CKEditor 5 with a block toolbar – the best browser-based rich text editor.",
   "keywords": [
     "wysiwyg",
