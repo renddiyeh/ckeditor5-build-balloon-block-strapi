@@ -7,3 +7,7 @@
 .ck.ck-block-toolbar-button {
 	transform: translateX( calc(-1 * var(--ck-spacing-large)) );
 }
+
+.ck.editor__editable {
+	border: 1px solid gray;
+}

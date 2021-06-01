@@ -31,6 +31,7 @@ import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformatio
 import CloudServices from '@ckeditor/ckeditor5-cloud-services/src/cloudservices';
 import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor';
 import { StrapiUploadAdapter } from '@gtomato/ckeditor5-strapi-upload-plugin';
+import muiColors from '@egoist/md-colors';
 
 import '../theme/theme.css';
 
@@ -65,6 +66,13 @@ BalloonEditor.builtinPlugins = [
 	StrapiUploadAdapter,
 ];
 
+const colorBlacklist = [
+	'blueGray',
+	'black',
+	'white',
+	'transparent',
+]
+
 // Editor configuration.
 BalloonEditor.defaultConfig = {
 	blockToolbar: [
@@ -93,6 +101,13 @@ BalloonEditor.defaultConfig = {
 		toolbar: [
 			'imageTextAlternative'
 		]
+	},
+	fontColor: {
+		columns: 8,
+		documentColors: 16,
+		colors: Object.keys(muiColors).filter(colorKey => !colorBlacklist.some(k => k === colorKey))
+			.reduce((all, colorKey) => all.concat([500, 700].map(v => ({ color: muiColors[colorKey][v], label: `${colorKey}.${v}` }))), [])
+			.concat({ color: '#000', label: 'black' }),
 	},
 	heading: {
 		options: [
