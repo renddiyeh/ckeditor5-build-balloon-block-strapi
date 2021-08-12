@@ -4,7 +4,7 @@
  */
 
 // The editor creator to use.
-import BalloonEditorBase from '@ckeditor/ckeditor5-editor-balloon/src/ballooneditor';
+import ClassicEditorBase from '@ckeditor/ckeditor5-editor-classic/src/classiceditor';
 
 import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials';
 import UploadAdapter from '@ckeditor/ckeditor5-adapter-ckfinder/src/uploadadapter';
@@ -22,6 +22,7 @@ import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
 import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
 import Indent from '@ckeditor/ckeditor5-indent/src/indent';
+import IndentBlock from '@ckeditor/ckeditor5-indent/src/indentblock';
 import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
 import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
@@ -35,10 +36,10 @@ import muiColors from '@egoist/md-colors';
 
 import '../theme/theme.css';
 
-export default class BalloonEditor extends BalloonEditorBase {}
+export default class ClassicEditor extends ClassicEditorBase {}
 
 // Plugins to include in the build.
-BalloonEditor.builtinPlugins = [
+ClassicEditor.builtinPlugins = [
 	Essentials,
 	UploadAdapter,
 	Autoformat,
@@ -56,6 +57,7 @@ BalloonEditor.builtinPlugins = [
 	ImageToolbar,
 	ImageUpload,
 	Indent,
+	IndentBlock,
 	Link,
 	List,
 	MediaEmbed,
@@ -74,7 +76,7 @@ const colorBlacklist = [
 ]
 
 // Editor configuration.
-BalloonEditor.defaultConfig = {
+ClassicEditor.defaultConfig = {
 	blockToolbar: [
 		"heading",
 		"bold",
@@ -84,6 +86,10 @@ BalloonEditor.defaultConfig = {
 		"bulletedList",
 		"numberedList",
 		"alignment",
+		"|",
+		"blockquote",
+		"outdent",
+		"indent",
 		"|",
 		"imageUpload",
 		"undo",
@@ -95,6 +101,10 @@ BalloonEditor.defaultConfig = {
 			'italic',
 			'link',
 			'fontColor',
+			"|",
+			"blockquote",
+			"outdent",
+			"indent",
 		]
 	},
 	image: {
