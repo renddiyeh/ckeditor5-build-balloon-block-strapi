@@ -8,6 +8,7 @@ import ClassicEditorBase from '@ckeditor/ckeditor5-editor-classic/src/classicedi
 
 import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials';
 import UploadAdapter from '@ckeditor/ckeditor5-adapter-ckfinder/src/uploadadapter';
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 import Autoformat from '@ckeditor/ckeditor5-autoformat/src/autoformat';
 import BlockToolbar from '@ckeditor/ckeditor5-ui/src/toolbar/block/blocktoolbar';
 import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold';
@@ -42,6 +43,7 @@ export default class ClassicEditor extends ClassicEditorBase {}
 ClassicEditor.builtinPlugins = [
 	Essentials,
 	UploadAdapter,
+	Alignment,
 	Autoformat,
 	BlockToolbar,
 	Bold,
@@ -77,7 +79,7 @@ const colorBlacklist = [
 
 // Editor configuration.
 ClassicEditor.defaultConfig = {
-	blockToolbar: [
+	toolbar: [
 		"heading",
 		"bold",
 		'fontColor',
@@ -95,18 +97,6 @@ ClassicEditor.defaultConfig = {
 		"undo",
 		"redo"
 	],
-	toolbar: {
-		items: [
-			'bold',
-			'italic',
-			'link',
-			'fontColor',
-			"|",
-			"blockquote",
-			"outdent",
-			"indent",
-		]
-	},
 	image: {
 		toolbar: [
 			'imageTextAlternative'
