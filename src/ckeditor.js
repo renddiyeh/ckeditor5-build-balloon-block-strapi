@@ -117,6 +117,13 @@ ClassicEditor.defaultConfig = {
 			{ model: 'paragraph', title: 'Paragraph' },
 		]
 	},
+	indentBlock: {
+		classes: [
+			'block-indent-a', // First step - smallest indentation.
+			'block-indent-b',
+			'block-indent-c'  // Last step - biggest indentation.
+		]
+	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
 	language: 'en'
 };

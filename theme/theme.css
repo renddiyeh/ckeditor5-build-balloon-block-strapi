@@ -11,3 +11,15 @@
 .ck.editor__editable {
 	border: 1px solid gray;
 }
+
+.ck .block-indent-a {
+	padding-left: 40px;
+}
+
+.ck .block-indent-b {
+	padding-left: 80px;
+}
+
+.ck .block-indent-c {
+	padding-left: 120px;
+}

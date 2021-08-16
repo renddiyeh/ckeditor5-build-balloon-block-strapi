@@ -1,6 +1,6 @@
 {
   "name": "ckeditor5-build-classic-block-strapi",
-  "version": "29.1.1",
+  "version": "29.1.2",
   "description": "The classic editor build of CKEditor 5 with a block toolbar – the best browser-based rich text editor.",
   "keywords": [
     "wysiwyg",
