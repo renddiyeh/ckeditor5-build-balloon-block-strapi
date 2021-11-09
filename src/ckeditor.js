@@ -107,6 +107,7 @@ ClassicEditor.defaultConfig = {
 		documentColors: 16,
 		colors: Object.keys(muiColors).filter(colorKey => !colorBlacklist.some(k => k === colorKey))
 			.reduce((all, colorKey) => all.concat([500, 700].map(v => ({ color: muiColors[colorKey][v], label: `${colorKey}.${v}` }))), [])
+			.concat({ color: muiColors.gray[800], label: 'gray.800' })
 			.concat({ color: '#000', label: 'black' }),
 	},
 	heading: {

@@ -12,6 +12,10 @@
 	border: 1px solid gray;
 }
 
+.ck.ck-editor {
+	color: #424242;
+}
+
 .ck .block-indent-a {
 	padding-left: 40px;
 }
